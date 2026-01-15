@@ -1,0 +1,37 @@
+[
+  {
+    "category": "Frontend",
+    "icon": "assets/images/frontend-logos.png",
+    "skills": "HTML5, CSS3, Responsive Design"
+  },
+  {
+    "category": "JavaScript",
+    "icon": "assets/images/javascript.png",
+    "skills": "DOM, AJAX, Vanilla JS, ES6+"
+  },
+  {
+    "category": "Database",
+    "icon": "assets/images/database.png",
+    "skills": "MongoDB, Supabase"
+  },
+  {
+    "category": "Backend",
+    "icon": "assets/images/backend.png",
+    "skills": "Node.js, Express.js, JWT"
+  },
+  {
+    "category": "Tools",
+    "icon": "assets/images/tools.png",
+    "skills": "Git, GitHub, VS Code"
+  },
+  {
+    "category": "AI Tools",
+    "icon": "assets/images/ai-icon.svg.png",
+    "skills": "ChatGPT, Claude, Gemini"
+  },
+  {
+    "category": "Production Tools",
+    "icon": "assets/images/work-2.png",
+    "skills": "Notion, Vercel, Netlify"
+  }
+]

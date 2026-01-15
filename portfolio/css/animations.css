@@ -1,0 +1,124 @@
+/* ===============================
+   GLOBAL BACKGROUND ANIMATIONS
+================================ */
+
+#bg-particles {
+  z-index: 0;
+}
+
+.bg-animated {
+  z-index: 1;
+}
+
+main,
+header,
+footer {
+  position: relative;
+  z-index: 2;
+}
+
+
+.bg-animated span {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(
+    circle,
+    var(--accent) 0%,
+    transparent 65%
+  );
+  opacity: 0.14;
+  filter: blur(90px);
+  transition: transform 0.2s ease-out;
+}
+
+/* Base positions */
+.bg-animated span:nth-child(1) {
+  top: 12%;
+  left: 10%;
+}
+.bg-animated span:nth-child(2) {
+  bottom: 18%;
+  right: 12%;
+}
+.bg-animated span:nth-child(3) {
+  top: 45%;
+  left: 50%;
+}
+
+
+/* ===== HERO CARD GLOW ===== */
+.hero-card {
+  position: relative;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.hero-card::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(124, 246, 255, 0.35),
+    transparent
+  );
+  opacity: 0;
+  filter: blur(12px);
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.hero-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.6);
+}
+
+.hero-card:hover::after {
+  opacity: 1;
+}
+
+/* ===== SCROLL REVEAL ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== FOOTER GLOW ===== */
+.footer {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-glow {
+  font-size: 14px;
+  opacity: 0.8;
+  text-shadow:
+    0 0 8px rgba(124, 246, 255, 0.4),
+    0 0 18px rgba(124, 246, 255, 0.2);
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%   { transform: translate(0, 0); }
+  50%  { transform: translate(40px, -30px); }
+  100% { transform: translate(0, 0); }
+}
+
+.bg-animated span:nth-child(1) {
+  animation: float 18s ease-in-out infinite;
+}
+.bg-animated span:nth-child(2) {
+  animation: float 22s ease-in-out infinite reverse;
+}
+.bg-animated span:nth-child(3) {
+  animation: float 26s ease-in-out infinite;
+}
+

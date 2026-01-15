@@ -1,0 +1,31 @@
+{
+  "experience": [
+    {
+      "date": "June 2025 – October 2025",
+      "title": "Web Development Intern",
+      "company": "LaunchEd Global",
+      "description": [
+        "Worked with HTML, CSS, JavaScript, MERN stack",
+        "Built responsive UI and animations",
+        "Improved performance and code structure"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "date": "2023 – Present",
+      "title": "Diploma in Computer Science",
+      "institution": "Government Polytechnic Aurai, Bhadohi"
+    },
+    {
+      "date": "Completed – 2023",
+      "title": "Senior Secondary",
+      "institution": "Successfully completed senior secondary education"
+    },
+    {
+      "date": "Completed – 2021",
+      "title": "Higher Secondary",
+      "institution": "Successfully completed higher secondary education"
+    }
+  ]
+}

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Frontend Developer building clean, fast, user-focused web apps."
+    />
+
+    <title>Anuj Prajapati | Frontend Developer</title>
+    <link rel="icon" href="assets/favicon/favicon.png" type="image/png" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script src="js/main.js" defer></script>
+    <script src="js/scroll.js" defer></script>
+    <script src="js/terminal.js" defer></script>
+  </head>
+
+  <body>
+    <!-- ===== GLOBAL BACKGROUND EFFECTS ===== -->
+    <canvas id="bg-particles"></canvas>
+
+    <div class="bg-animated parallax" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- ============== NAVBAR ============== -->
+    <header id="navbar">
+      <div class="nav-container">
+        <div class="logo">AP</div>
+
+        <nav class="nav-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#terminal">Download CV</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+          <!-- <button id="theme-editor">⚙</button> -->
+          <button
+            id="menu-toggle"
+            class="menu-toggle"
+            aria-label="Open menu"
+            role="button"
+            aria-expanded="false"
+            tabindex="0"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div id="menu-backdrop" class="menu-backdrop"></div>
+
+    <nav id="mobile-menu" class="mobile-menu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#terminal">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+      <!-- ============== HERO / HEADER ============== -->
+      <section id="home" class="section hero-section">
+        <div class="hero-background"></div>
+        <div class="container hero-content">
+          <h1
+            class="hero-title"
+            data-text="Frontend Developer | Turning Complex Ideas into Fast, Usable Web Interfaces"
+          ></h1>
+          <p class="hero-subtitle">
+            👉 Focused on building usable, structured frontend interfaces with
+            JavaScript, HTML, and CSS.
+          </p>
+          <div class="hero-cards">
+            <a href="#about" class="hero-card">
+              <h3>About Me</h3>
+              <p>Who I am & how I think</p>
+            </a>
+
+            <a href="#projects" class="hero-card">
+              <h3>Projects</h3>
+              <p>Real work, real code</p>
+            </a>
+
+            <a href="#skills" class="hero-card">
+              <h3>Skills</h3>
+              <p>Tools I actually use</p>
+            </a>
+
+            <a href="#terminal" class="hero-card">
+              <h3>Resume</h3>
+              <p>Download CV</p>
+            </a>
+          </div>
+
+          <div class="scroll-indicator">↓ Scroll</div>
+        </div>
+      </section>
+
+      <!-- ============== ABOUT ============== -->
+      <section id="about" class="section about-section">
+        <div class="container about-content glass">
+          <div class="about-text">
+            <h2>About Me</h2>
+
+            <p>
+              I’m a frontend developer who cares about how things feel, not just
+              how they look. I enjoy turning complex ideas into clear, usable
+              interfaces.
+            </p>
+
+            <p>
+              My focus is JavaScript, modern CSS, and building UI that’s fast,
+              accessible, and easy to reason about. I like clean structure,
+              subtle motion, and interfaces that don’t fight the user.
+            </p>
+
+            <p class="about-highlight">
+              I’m actively building real projects, learning by shipping, and
+              pushing my frontend skills deeper every month.
+            </p>
+          </div>
+
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-value">1+</span>
+              <span class="stat-label">Years Learning</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">10+</span>
+              <span class="stat-label">Projects Built</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">∞</span>
+              <span class="stat-label">Curiosity</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============== PROJECTS ============== -->
+      <section id="projects" class="section projects-section">
+        <div class="container projects-wrapper">
+          <h2 class="projects-title">Projects & Development Work</h2>
+          <p class="projects-subtitle">
+            A selection of personal and training projects showcasing my skills
+            in frontend and full-stack development.
+          </p>
+          <div class="projects-grid">
+            <article class="project-card reveal">
+              <h3>Anime & TV Series Tracker</h3>
+              <p class="project-desc">
+                A full-stack platform to track anime & TV shows, manage
+                watchlists, join community clubs, and discover new content with
+                personalized insights.
+              </p>
+              <ul class="project-features">
+                <li>Watchlist with status tracking</li>
+                <li>Community clubs, polls & discussions</li>
+                <li>Admin panel & analytics dashboard</li>
+                <li>JWT authentication + dark/light mode</li>
+              </ul>
+              <div class="project-tech">
+                HTML • CSS • JavaScript • Node.js • Express • MongoDB • JWT
+              </div>
+              <div class="project-links">
+                <a href="#" target="_blank">⚠️ Private Repository</a>
+                <a href="https://github.com/DevelopWithAnuj" target="_blank"
+                  >GitHub</a
+                >
+              </div>
+            </article>
+            <article class="project-card reveal">
+              <h3>Summer Training – Frontend Projects</h3>
+              <p class="project-desc">
+                A curated collection of HTML & CSS mini-projects focused on
+                layout, responsiveness, navigation, and UI fundamentals.
+              </p>
+              <ul class="project-features">
+                <li>Portfolio, landing pages, blogs, galleries</li>
+                <li>Sticky navbar & smooth scroll demos</li>
+                <li>Reusable UI components</li>
+                <li>Live previews via GitHub Pages</li>
+              </ul>
+              <div class="project-tech">
+                HTML5 • CSS3 • Responsive Design • GitHub Pages
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://developwithanuj.github.io/SummerTrainingProjects/"
+                  target="_blank"
+                  >Live</a
+                >
+                <a href="https://github.com/DevelopWithAnuj" target="_blank"
+                  >GitHub</a
+                >
+              </div>
+            </article>
+            <article class="project-card reveal">
+              <h3>Tour & Travel Booking Website</h3>
+              <p class="project-desc">
+                A responsive travel booking web app with destination browsing,
+                blogs, booking flow, and an admin-style dashboard using browser
+                storage.
+              </p>
+              <ul class="project-features">
+                <li>Login / register flow</li>
+                <li>Dynamic blog & booking system</li>
+                <li>Admin booking dashboard</li>
+                <li>LocalStorage-based persistence</li>
+              </ul>
+              <div class="project-tech">
+                HTML • CSS • Vanilla JavaScript • LocalStorage
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://developwithanuj.github.io/Minor-project--tour-travel-web/"
+                  target="_blank"
+                  >Live</a
+                >
+                <a href="https://github.com/DevelopWithAnuj" target="_blank"
+                  >GitHub</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- <div class="projects-left">
+          <h2>UI / Design Projects</h2>
+              <article class="project-card reveal">Project 1</article>
+              <article class="project-card reveal">Project 2</article>
+            </div>
+            <div class="projects-right">
+            <h2>Code / Backend Projects</h2>
+            <article class="project-card reveal">Project A</article>
+            <article class="project-card reveal">Project B</article>
+          </div> -->
+
+      <!-- ============== SKILLS ============== -->
+      <section id="skills" class="section skills-section">
+        <div class="container skills-wrapper">
+          <h2 class="section-title">Technical Skills</h2>
+          <p class="section-subtitle">Technologies I work with</p>
+
+          <div class="skills-grid">
+            <!-- Skills will be dynamically loaded here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ============== EXPERIENCE ============== -->
+      <section id="experience" class="section experience-section">
+        <div class="container">
+          <h2 class="section-title">Experience</h2>
+
+          <div class="timeline">
+            <!-- Experience will be dynamically loaded here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ============== EDUCATION ============== -->
+      <section id="education" class="section education-section">
+        <div class="container">
+          <h2 class="section-title">Education</h2>
+
+          <div class="timeline">
+            <!-- Education will be dynamically loaded here -->
+          </div>
+        </div>
+      </section>
+
+      <section id="terminal" class="terminal-section terminal">
+        <div class="container">
+          <div class="terminal-header">
+            <span></span><span></span><span></span>
+          </div>
+          <pre id="terminalOutput" tabindex="0"></pre>
+        </div>
+      </section>
+
+      <!-- ============== CONTACT + SOCIAL ============== -->
+
+      <section id="contact" class="section contact-section">
+        <div class="container">
+          <h2>Let’s Build Something Cool</h2>
+
+          <div class="contact-details">
+            <p>
+              <i class="fa-solid fa-envelope"></i> anujprajapati48031@gmail.com
+            </p>
+            <p>
+              <i class="fa-solid fa-location-dot"></i>
+              <strong>Location:</strong> Uttar Pradesh, India
+            </p>
+          </div>
+
+          <div class="social-links">
+            <a href="https://github.com/DevelopWithAnuj" target="_blank">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/anuj-prajapati1" target="_blank"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a href="https://x.com/Anuj1427" target="_blank"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <a href="https://www.instagram.com/devwithanuj" target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- ============== FOOTER ============== -->
+
+    <footer class="footer">
+      <p class="footer-glow">
+        <i class="fa-regular fa-copyright"></i>
+        2026 Anuj Prajapati. All rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>
