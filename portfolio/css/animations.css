@@ -2,51 +2,6 @@
    GLOBAL BACKGROUND ANIMATIONS
 ================================ */
 
-#bg-particles {
-  z-index: 0;
-}
-
-.bg-animated {
-  z-index: 1;
-}
-
-main,
-header,
-footer {
-  position: relative;
-  z-index: 2;
-}
-
-
-.bg-animated span {
-  position: absolute;
-  width: 420px;
-  height: 420px;
-  background: radial-gradient(
-    circle,
-    var(--accent) 0%,
-    transparent 65%
-  );
-  opacity: 0.14;
-  filter: blur(90px);
-  transition: transform 0.2s ease-out;
-}
-
-/* Base positions */
-.bg-animated span:nth-child(1) {
-  top: 12%;
-  left: 10%;
-}
-.bg-animated span:nth-child(2) {
-  bottom: 18%;
-  right: 12%;
-}
-.bg-animated span:nth-child(3) {
-  top: 45%;
-  left: 50%;
-}
-
-
 /* ===== HERO CARD GLOW ===== */
 .hero-card {
   position: relative;
@@ -113,12 +68,12 @@ footer {
 }
 
 .bg-animated span:nth-child(1) {
-  animation: float 18s ease-in-out infinite;
+  animation: float 18s linear infinite;
 }
 .bg-animated span:nth-child(2) {
-  animation: float 22s ease-in-out infinite reverse;
+  animation: float 22s linear infinite reverse;
 }
 .bg-animated span:nth-child(3) {
-  animation: float 26s ease-in-out infinite;
+  animation: float 26s linear infinite;
 }
 

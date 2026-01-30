@@ -5,9 +5,11 @@ const body = document.body;
 ================================ */
 const toggleBtn = document.getElementById("theme-toggle");
 
-const savedMode = localStorage.getItem("mode") || "dark";
-body.classList.toggle("light", savedMode === "light");
-toggleBtn.textContent = savedMode === "light" ? "☀️" : "🌙";
+function initializeTheme() {
+  const savedMode = localStorage.getItem("mode") || "dark";
+  body.classList.toggle("light", savedMode === "light");
+  toggleBtn.textContent = savedMode === "light" ? "☀️" : "🌙";
+}
 
 toggleBtn.addEventListener("click", () => {
   const isLight = body.classList.toggle("light");

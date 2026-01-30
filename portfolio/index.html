@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,13 +10,12 @@
 
     <title>Anuj Prajapati | Frontend Developer</title>
     <link rel="icon" href="assets/favicon/favicon.png" type="image/png" />
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
     <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/main.css" />
 
+    <script src="js/theme.js" defer></script>
     <script src="js/main.js" defer></script>
     <script src="js/scroll.js" defer></script>
     <script src="js/terminal.js" defer></script>
@@ -24,13 +23,7 @@
 
   <body>
     <!-- ===== GLOBAL BACKGROUND EFFECTS ===== -->
-    <canvas id="bg-particles"></canvas>
 
-    <div class="bg-animated parallax" aria-hidden="true">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
 
     <!-- ============== NAVBAR ============== -->
     <header id="navbar">
@@ -83,30 +76,31 @@
         <div class="container hero-content">
           <h1
             class="hero-title"
-            data-text="Frontend Developer | Turning Complex Ideas into Fast, Usable Web Interfaces"
-          ></h1>
-          <p class="hero-subtitle">
+            data-text="Turning Complex Ideas into Fast, Usable Web Interfaces"
+          >
+            Frontend Developer |
+          </h1>          <p class="hero-subtitle">
             👉 Focused on building usable, structured frontend interfaces with
             JavaScript, HTML, and CSS.
           </p>
           <div class="hero-cards">
             <a href="#about" class="hero-card">
-              <h3>About Me</h3>
+              <p class="hero-card-title">About Me</p>
               <p>Who I am & how I think</p>
             </a>
 
             <a href="#projects" class="hero-card">
-              <h3>Projects</h3>
+              <p class="hero-card-title">Projects</p>
               <p>Real work, real code</p>
             </a>
 
             <a href="#skills" class="hero-card">
-              <h3>Skills</h3>
+              <p class="hero-card-title">Skills</p>
               <p>Tools I actually use</p>
             </a>
 
             <a href="#terminal" class="hero-card">
-              <h3>Resume</h3>
+              <p class="hero-card-title">Resume</p>
               <p>Download CV</p>
             </a>
           </div>
@@ -122,20 +116,19 @@
             <h2>About Me</h2>
 
             <p>
-              I’m a frontend developer who cares about how things feel, not just
-              how they look. I enjoy turning complex ideas into clear, usable
-              interfaces.
+              I’m a frontend developer focused on building interfaces that are clear, fast, and practical for real users. My interest lies in translating complex requirements into clear, functional web experiences.
             </p>
 
             <p>
-              My focus is JavaScript, modern CSS, and building UI that’s fast,
-              accessible, and easy to reason about. I like clean structure,
-              subtle motion, and interfaces that don’t fight the user.
+              My technical foundation is in JavaScript, modern CSS, and clean
+              HTML. I prioritize building UIs that are performant, accessible,
+              and maintainable. I advocate for clear code structure, thoughtful
+              interaction design, and experiences that are intuitive.
             </p>
 
             <p class="about-highlight">
-              I’m actively building real projects, learning by shipping, and
-              pushing my frontend skills deeper every month.
+              I consistently engage with new projects, integrating feedback, and
+              refining my technical skills through practical application.
             </p>
           </div>
 
@@ -168,76 +161,108 @@
             <article class="project-card reveal">
               <h3>Anime & TV Series Tracker</h3>
               <p class="project-desc">
-                A full-stack platform to track anime & TV shows, manage
-                watchlists, join community clubs, and discover new content with
-                personalized insights.
+                <strong>Problem:</strong> Needed a centralized way to track watch history and discover new content, replacing manual lists. <br />
+                <strong>Learning:</strong> This project was a deep dive into full-stack development, focusing on secure user authentication, relational data management with MongoDB, and building a RESTful API with Node.js and Express.
               </p>
               <ul class="project-features">
-                <li>Watchlist with status tracking</li>
-                <li>Community clubs, polls & discussions</li>
-                <li>Admin panel & analytics dashboard</li>
-                <li>JWT authentication + dark/light mode</li>
+                <li><strong>Core Functionality:</strong> Secure user authentication, user profiles, and personalized watch history.</li>
+                <li><strong>Watchlist Management:</strong> Track series, episodes, and update watch status.</li>
+                <li><strong>Community Features:</strong> Enabled discussions, comments, and shared recommendations.</li>
+                <li><strong>Technical Exploration:</strong> Implemented AI-powered recommendations and ensured a fully responsive UI across devices.</li>
               </ul>
               <div class="project-tech">
-                HTML • CSS • JavaScript • Node.js • Express • MongoDB • JWT
+                <strong>Frontend</strong> HTML • CSS • JavaScript <br />
+                <strong>Backend</strong> • Node.js • Express • MongoDB • JWT
               </div>
               <div class="project-links">
                 <a href="#" target="_blank">⚠️ Private Repository</a>
-                <a href="https://github.com/DevelopWithAnuj" target="_blank"
-                  >GitHub</a
+                <a href="https://github.com/DevelopWithAnuj" target="_blank" rel="noopener noreferrer"
+                  >GitHub <span class="visually-hidden">(opens in a new tab)</span></a
                 >
               </div>
             </article>
             <article class="project-card reveal">
               <h3>Summer Training – Frontend Projects</h3>
               <p class="project-desc">
-                A curated collection of HTML & CSS mini-projects focused on
-                layout, responsiveness, navigation, and UI fundamentals.
+                <strong>Problem:</strong> To build a strong foundational understanding of core frontend technologies through hands-on practice. <br />
+                <strong>Learning:</strong> Solidified skills in semantic HTML, modern CSS layouts (including Flexbox and Grid), and vanilla JavaScript for DOM manipulation and interactivity.
               </p>
               <ul class="project-features">
-                <li>Portfolio, landing pages, blogs, galleries</li>
-                <li>Sticky navbar & smooth scroll demos</li>
-                <li>Reusable UI components</li>
-                <li>Live previews via GitHub Pages</li>
+                <li><strong>Fundamental Projects:</strong> Practice with building portfolios, landing pages, blogs, and galleries.</li>
+                <li><strong>UI Patterns:</strong> Explored sticky navbars, smooth scrolling, and reusable components.</li>
+                <li><strong>Deployment Practice:</strong> Hosted live previews directly via GitHub Pages.</li>
               </ul>
               <div class="project-tech">
-                HTML5 • CSS3 • Responsive Design • GitHub Pages
+                <strong>TechStack</strong> HTML5 • CSS3 • Responsive Design •
+                GitHub Pages
               </div>
               <div class="project-links">
                 <a
                   href="https://developwithanuj.github.io/SummerTrainingProjects/"
                   target="_blank"
-                  >Live</a
+                  rel="noopener noreferrer"
+                  >Live <span class="visually-hidden">(opens in a new tab)</span></a
                 >
-                <a href="https://github.com/DevelopWithAnuj" target="_blank"
-                  >GitHub</a
+                <a href="https://github.com/DevelopWithAnuj" target="_blank" rel="noopener noreferrer"
+                  >GitHub <span class="visually-hidden">(opens in a new tab)</span></a
                 >
               </div>
             </article>
             <article class="project-card reveal">
-              <h3>Tour & Travel Booking Website</h3>
+              <h3>Tour & Travel Website</h3>
               <p class="project-desc">
-                A responsive travel booking web app with destination browsing,
-                blogs, booking flow, and an admin-style dashboard using browser
-                storage.
+                <strong>Problem:</strong> Create a dynamic travel booking site without a backend, relying entirely on client-side logic. <br />
+                <strong>Learning:</strong> Mastered client-side state management using vanilla JavaScript and LocalStorage, creating a surprisingly robust interactive experience for booking and user management.
               </p>
               <ul class="project-features">
-                <li>Login / register flow</li>
-                <li>Dynamic blog & booking system</li>
-                <li>Admin booking dashboard</li>
-                <li>LocalStorage-based persistence</li>
+                <li><strong>User Management:</strong> Implemented a secure login/registration system.</li>
+                <li><strong>Core Functionality:</strong> Dynamic blog and booking system.</li>
+                <li><strong>Data Handling:</strong> Utilized LocalStorage for client-side data persistence.</li>
+                <li><strong>Administrative Tools:</strong> Features an admin dashboard for managing bookings.</li>
               </ul>
               <div class="project-tech">
-                HTML • CSS • Vanilla JavaScript • LocalStorage
+                <strong>TechStack</strong> HTML • CSS • Vanilla JavaScript •
+                LocalStorage
               </div>
               <div class="project-links">
                 <a
                   href="https://developwithanuj.github.io/Minor-project--tour-travel-web/"
                   target="_blank"
-                  >Live</a
+                  rel="noopener noreferrer"
+                  >Live <span class="visually-hidden">(opens in a new tab)</span></a
                 >
-                <a href="https://github.com/DevelopWithAnuj" target="_blank"
-                  >GitHub</a
+                <a href="https://github.com/DevelopWithAnuj" target="_blank" rel="noopener noreferrer"
+                  >GitHub <span class="visually-hidden">(opens in a new tab)</span></a
+                >
+              </div>
+            </article>
+            <article class="project-card reveal">
+              <h3>Student Attendance Tracker</h3>
+              <p class="project-desc">
+                <strong>Problem:</strong> Traditional attendance methods are manual, slow, and error-prone. This project aimed to digitize and automate the process. <br />
+                <strong>Learning:</strong> Gained experience in designing a relational database schema, implementing role-based access control (Admin, Teacher, Student) with Supabase, and building a real-time, responsive UI with Next.js.
+              </p>
+              <ul class="project-features">
+                <li><strong>Access Control:</strong> Role-based system for Admin, Teacher, and Student with secure authentication.</li>
+                <li><strong>Attendance Management:</strong> Digital tracking by date and subject, with automated percentage calculations.</li>
+                <li><strong>Data & Reporting:</strong> Real-time records, student/class management, and exportable attendance reports.</li>
+                <li><strong>User Experience:</strong> Responsive UI designed for all devices, prioritizing usability.</li>
+              </ul>
+              <div class="project-tech">
+                <strong>Frontend</strong> Next.js • TypeScript • Tailwind CSS3
+                <br />
+                <strong>Backend</strong> Node.js • Express.js • Supabase
+                (Database + Auth)
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://developwithanuj.github.io/Minor-project--tour-travel-web/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Live <span class="visually-hidden">(opens in a new tab)</span></a
+                >
+                <a href="https://github.com/DevelopWithAnuj" target="_blank" rel="noopener noreferrer"
+                  >GitHub <span class="visually-hidden">(opens in a new tab)</span></a
                 >
               </div>
             </article>
@@ -263,6 +288,7 @@
           <p class="section-subtitle">Technologies I work with</p>
 
           <div class="skills-grid">
+            <p>My core skills include JavaScript, HTML, CSS, and React. I am also experienced with Node.js, Express, and MongoDB. For a full list of my skills, please download my resume.</p>
             <!-- Skills will be dynamically loaded here -->
           </div>
         </div>
@@ -292,6 +318,7 @@
 
       <section id="terminal" class="terminal-section terminal">
         <div class="container">
+          <p class="terminal-hint">Click the terminal to start. Type 'help' for a list of commands.</p>
           <div class="terminal-header">
             <span></span><span></span><span></span>
           </div>
@@ -303,31 +330,35 @@
 
       <section id="contact" class="section contact-section">
         <div class="container">
-          <h2>Let’s Build Something Cool</h2>
+          <h2>Let's Connect and Build</h2>
 
           <div class="contact-details">
             <p>
-              <i class="fa-solid fa-envelope"></i> anujprajapati48031@gmail.com
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i> anujprajapati48031@gmail.com
             </p>
             <p>
-              <i class="fa-solid fa-location-dot"></i>
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
               <strong>Location:</strong> Uttar Pradesh, India
             </p>
           </div>
 
           <div class="social-links">
-            <a href="https://github.com/DevelopWithAnuj" target="_blank">
-              <i class="fa-brands fa-github"></i>
+            <a href="https://github.com/DevelopWithAnuj" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+              <span class="visually-hidden">(opens in a new tab)</span>
             </a>
-            <a href="https://www.linkedin.com/anuj-prajapati1" target="_blank"
-              ><i class="fa-brands fa-linkedin"></i
-            ></a>
-            <a href="https://x.com/Anuj1427" target="_blank"
-              ><i class="fa-brands fa-x-twitter"></i
-            ></a>
-            <a href="https://www.instagram.com/devwithanuj" target="_blank"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
+            <a href="https://www.linkedin.com/anuj-prajapati1" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+              ><i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              <span class="visually-hidden">(opens in a new tab)</span></a
+            >
+            <a href="https://x.com/Anuj1427" target="_blank" rel="noopener noreferrer" aria-label="X (formerly Twitter)"
+              ><i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+              <span class="visually-hidden">(opens in a new tab)</span></a
+            >
+            <a href="https://www.instagram.com/devwithanuj" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+              ><i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              <span class="visually-hidden">(opens in a new tab)</span></a
+            >
           </div>
         </div>
       </section>
@@ -336,7 +367,7 @@
 
     <footer class="footer">
       <p class="footer-glow">
-        <i class="fa-regular fa-copyright"></i>
+        &copy;
         2026 Anuj Prajapati. All rights reserved.
       </p>
     </footer>

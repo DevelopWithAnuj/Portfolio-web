@@ -5,36 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Frontend Developer building clean, fast, user-focused web apps."
+      content="Anuj Prajapati: Frontend Engineer, Building Thoughtful Web Experiences. Focused on clean, performant UI with robust logic."
     />
+    <meta name="author" content="Anuj Prajapati">
 
-    <title>Anuj Prajapati | Frontend Developer</title>
-    <link rel="icon" href="assets/favicon/favicon.png" type="image/png" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourportfolio.com/"> <!-- UPDATE THIS URL -->
+    <meta property="og:title" content="Anuj Prajapati | Frontend Engineer">
+    <meta property="og:description" content="Anuj Prajapati: Frontend Engineer, Building Thoughtful Web Experiences. Focused on clean, performant UI with robust logic.">
+    <meta property="og:image" content="https://yourportfolio.com/social-share.jpg"> <!-- UPDATE THIS IMAGE -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourportfolio.com/"> <!-- UPDATE THIS URL -->
+    <meta property="twitter:title" content="Anuj Prajapati | Frontend Engineer">
+    <meta property="twitter:description" content="Anuj Prajapati: Frontend Engineer, Building Thoughtful Web Experiences. Focused on clean, performant UI with robust logic.">
+    <meta property="twitter:image" content="https://yourportfolio.com/social-share.jpg"> <!-- UPDATE THIS IMAGE -->
+
+    <title>Anuj Prajapati | Frontend Engineer, Building Thoughtful Web Experiences</title>
+    <link rel="icon" href="portfolio/assets/favicon/favicon.png" type="image/png" />
+    <!-- Preconnect to Font Awesome CDN for faster loading -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <style>
+      /* --- LANDING PAGE STYLES --- */
       * {
         padding: 0;
         margin: 0;
         box-sizing: border-box;
       }
       body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        color: #333;
-        background-image: linear-gradient(to right, #6a11cb, #2575fc);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        color: #ddd;
+        background-color: #0b0e14;
+        background-image: radial-gradient(circle at top left, rgba(124, 246, 255, 0.1), transparent 30%),
+                          radial-gradient(circle at bottom right, rgba(255, 80, 200, 0.1), transparent 30%);
       }
       .hero {
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 20px;
       }
       .container {
-        width: 90%;
+        width: 100%;
         max-width: 650px;
-        height: 80vh;
+        height: 85vh;
         margin: 0 auto;
       }
       .wrapper {
@@ -42,79 +63,145 @@
         justify-content: center;
         align-items: center;
         background-image: url(portfolio/assets/images/pngwing.com.png);
-        background-size: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
         background-position: center;
         height: 100%;
-        border-radius: 15px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        border-radius: 24px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
         position: relative;
+        opacity: 0.6;
       }
       .card {
-        background: rgba(255, 255, 255, 0.12);
-        backdrop-filter: blur(12px);
-        padding: 150px 35px;
-        border-radius: 15px;
+        background: rgba(15, 18, 25, 0.6);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        padding: 60px 40px;
+        border-radius: 24px;
         height: 100%;
+        width: 100%;
         text-align: center;
-        color: #242121;
-        box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-        animation: floatIn 1s ease-out forwards,
-          float 6s ease-in-out infinite 1s;
+        color: #fff;
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
       }
 
-      @keyframes floatIn {
+      /* -- Improved Entrance Animation: Set initial state -- */
+      .title, .subtitle, .btn {
+        opacity: 0;
+      }
+
+      /* -- Accessibility: Respect user preference for reduced motion -- */
+      @media (prefers-reduced-motion: no-preference) {
+        /* -- New: Staggered entrance animations done in CSS -- */
+        .title {
+          animation: fadeInUp 0.8s ease-out 0.8s forwards;
+        }
+        .subtitle {
+          animation: fadeInUp 0.8s ease-out 1.1s forwards;
+        }
+        .btn {
+          animation: fadeInUp 0.8s ease-out 1.4s forwards;
+          transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+        }
+        .typing-cursor {
+          animation: blink 1s step-end infinite;
+        }
+        .loader-ring {
+          animation: pulse-ring 1.5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+        }
+        .page-loader {
+          transition: opacity 0.4s ease;
+        }
+      }
+      /* -- Fallback for reduced motion: Make elements visible without animation -- */
+      @media (prefers-reduced-motion: reduce) {
+        .title, .subtitle, .btn {
+          opacity: 1;
+        }
+      }
+
+      /* -- New: More subtle entrance animation keyframes -- */
+      @keyframes fadeInUp {
         from {
           opacity: 0;
-          transform: translateY(25px);
+          transform: translateY(20px);
         }
         to {
           opacity: 1;
           transform: translateY(0);
         }
       }
-
-      @keyframes float {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-6px);
-        }
-      }
+      
       .title {
-        font-size: 2.5rem;
-        margin-bottom: 15px;
+        font-size: clamp(2rem, 5vw, 2.8rem);
+        margin-bottom: 20px;
+        font-weight: 600;
+        min-height: 1.2em; /* Prevent layout shift during animation */
       }
+
+      .typing-cursor {
+        display: inline-block;
+        width: 8px;
+        height: 1em;
+        background-color: white;
+        vertical-align: middle;
+      }
+
+      @keyframes blink {
+        from, to { background-color: transparent }
+        50% { background-color: white; }
+      }
+
       .subtitle {
-        font-size: 1.2rem;
-        margin-bottom: 25px;
+        font-size: clamp(1rem, 4vw, 1.1rem);
+        margin-bottom: 35px;
+        line-height: 1.6;
+        color: #c0c0c0;
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
       }
       .btn {
-        padding: 12px 25px;
+        padding: 14px 32px;
         font-size: 1rem;
+        font-weight: 600;
         color: #fff;
-        background-color: #2575fc;
-        border: none;
-        border-radius: 25px;
+        background: linear-gradient(90deg, #3a79f8, #623df5);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 50px;
         cursor: pointer;
-        transition: background-color 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
       }
-      .btn:hover {
-        background-color: #6a11cb;
+
+      .btn:hover, .btn:focus-visible {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        background: linear-gradient(90deg, #4a89ff, #724eff);
       }
+
+      /* -- New: Improved Interaction with a 'press' effect -- */
+      .btn:active {
+        transform: translateY(0) scale(0.98);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .btn:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(74, 137, 255, 0.6);
+      }
+
       .page-loader {
         position: fixed;
         inset: 0;
-        background: linear-gradient(to right, #6a11cb, #2575fc);
+        background-color: #0b0e14;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         z-index: 9999;
-
         opacity: 0;
         pointer-events: none;
-        transition: opacity 0.3s ease;
       }
 
       .page-loader.active {
@@ -122,32 +209,47 @@
         pointer-events: all;
       }
 
-      /* Spinner */
+      /* -- New: Modern pulse animation for loader -- */
       .loader-ring {
-        width: 54px;
-        height: 54px;
-        border: 4px solid rgba(255, 255, 255, 0.2);
-        border-top-color: #fff;
+        width: 60px;
+        height: 60px;
         border-radius: 50%;
-        animation: spin 0.8s linear infinite;
+        /* The border creates the ring that will be scaled */
+        border: 2px solid rgba(255, 255, 255, 0.8);
       }
 
-      @keyframes spin {
-        to {
-          transform: rotate(360deg);
+      @keyframes pulse-ring {
+        0% {
+          transform: scale(0.6);
+          opacity: 0.8;
         }
+        100% {
+          transform: scale(1.2);
+          opacity: 0;
+        }
+      }
+
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
       }
     </style>
   </head>
   <body>
-    <main class="hero" role="main">
+    <main class="hero" id="main-content">
       <div class="container">
         <div class="wrapper">
           <div class="card" id="card">
-            <h1 class="title">Welcome To My Portfolio!</h1>
+            <h1 class="title" id="animated-title" data-text="Anuj Prajapati: Frontend Engineer, Crafting Effective Web Experiences."></h1>
             <p class="subtitle">
-              Explore my work, projects, and how I approach building for the
-              web.
+              I build clean, performant user interfaces with solid underlying logic. My approach is driven by a continuous desire to learn and improve.
             </p>
             <button class="btn" aria-label="Enter portfolio" id="enterBtn">
               Enter Portfolio
@@ -156,26 +258,76 @@
         </div>
       </div>
     </main>
-    <div id="page-loader" class="page-loader">
-      <div class="loader-ring"></div>
+    <div id="page-loader" class="page-loader" role="status" aria-live="polite">
+      <div class="loader-ring" aria-hidden="true"></div>
+      <span class="visually-hidden">Loading, please wait...</span>
     </div>
 
     <script>
       const btn = document.getElementById("enterBtn");
-      // ===== PAGE LOADER =====
       const pageLoader = document.getElementById("page-loader");
+      const mainContent = document.getElementById("main-content");
 
       function showLoaderAndRedirect(url) {
         pageLoader.classList.add("active");
+        mainContent.setAttribute('aria-hidden', 'true'); // Hide main content from screen readers
         btn.disabled = true;
 
         setTimeout(() => {
           window.location.href = url;
         }, 800);
       }
+
       btn.addEventListener("click", () => {
         showLoaderAndRedirect("portfolio/index.html");
-        document.getElementById("card").style.opacity = "0.4";
+      });
+
+      // ===== GLITCH / DECODING TEXT ANIMATION =====
+      document.addEventListener("DOMContentLoaded", () => {
+        const titleElement = document.getElementById("animated-title");
+        const originalText = titleElement.getAttribute("data-text");
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        // CSS handles the staggered fade-in for title, subtitle, and button.
+        // We only run the decoding animation if motion is not reduced.
+        if (prefersReducedMotion) {
+          titleElement.textContent = originalText;
+          // In reduced motion, CSS will set opacity: 1, so no need to set it here.
+        } else {
+          // If animation is to run, initially clear content for decoding effect
+          titleElement.textContent = ""; 
+          const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-=_+[]{}|;:',.<>/?`~";
+
+          function animateText() {
+              let iteration = 0;
+              // Ensure opacity is 1 if animation is running (CSS handles initial opacity 0 then fade in)
+              // titleElement.style.opacity = '1'; // Removed: CSS animation handles this
+              const interval = setInterval(() => {
+                  titleElement.textContent = originalText
+                      .split("")
+                      .map((char, index) => {
+                          if (char === ' ') return ' '; // Preserve spaces
+                          if (index < iteration) {
+                              return originalText[index];
+                          }
+                          return characters[Math.floor(Math.random() * characters.length)];
+                      })
+                      .join("");
+
+                  if (iteration >= originalText.length) {
+                      clearInterval(interval);
+                      const cursor = document.createElement("span");
+                      cursor.classList.add("typing-cursor");
+                      titleElement.appendChild(cursor);
+                  }
+                  iteration += 1 / 2; // Adjust animation speed
+              }, 30);
+          }
+          
+          // Delay the start of the decoding animation to sync with CSS staggered animations.
+          // The CSS animation for the title (fadeInUp) starts at 0.8s, so this starts after that.
+          setTimeout(animateText, 800); 
+        }
       });
     </script>
   </body>
