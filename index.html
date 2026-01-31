@@ -86,14 +86,11 @@
         box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
       }
 
-      /* -- Improved Entrance Animation: Set initial state -- */
       .title, .subtitle, .btn {
         opacity: 0;
       }
 
-      /* -- Accessibility: Respect user preference for reduced motion -- */
       @media (prefers-reduced-motion: no-preference) {
-        /* -- New: Staggered entrance animations done in CSS -- */
         .title {
           animation: fadeInUp 0.8s ease-out 0.8s forwards;
         }
@@ -121,7 +118,7 @@
         }
       }
 
-      /* -- New: More subtle entrance animation keyframes -- */
+      /* -- More subtle entrance animation keyframes -- */
       @keyframes fadeInUp {
         from {
           opacity: 0;
@@ -180,7 +177,7 @@
         background: linear-gradient(90deg, #4a89ff, #724eff);
       }
 
-      /* -- New: Improved Interaction with a 'press' effect -- */
+      /* -- Improved Interaction with a 'press' effect -- */
       .btn:active {
         transform: translateY(0) scale(0.98);
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
@@ -209,12 +206,11 @@
         pointer-events: all;
       }
 
-      /* -- New: Modern pulse animation for loader -- */
+      /* -- Modern pulse animation for loader -- */
       .loader-ring {
         width: 60px;
         height: 60px;
         border-radius: 50%;
-        /* The border creates the ring that will be scaled */
         border: 2px solid rgba(255, 255, 255, 0.8);
       }
 
@@ -296,7 +292,7 @@
         } else {
           // If animation is to run, initially clear content for decoding effect
           titleElement.textContent = ""; 
-          const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-=_+[]{}|;:',.<>/?`~";
+          const characters = "ABCDEFGHIJKVWXYZabcdefghijkvwxyz0123456789!@#$%^&*()-=_+[]{}<>/?`~";
 
           function animateText() {
               let iteration = 0;
@@ -323,10 +319,7 @@
                   iteration += 1 / 2; // Adjust animation speed
               }, 30);
           }
-          
-          // Delay the start of the decoding animation to sync with CSS staggered animations.
-          // The CSS animation for the title (fadeInUp) starts at 0.8s, so this starts after that.
-          setTimeout(animateText, 800); 
+          setTimeout(animateText, 500); 
         }
       });
     </script>
