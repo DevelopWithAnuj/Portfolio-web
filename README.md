@@ -5,7 +5,7 @@ This repository contains the source code for my personal portfolio, a modern and
 ---
 
 ## Live Preview
-👉 **(https://developwithanuj.github.io/Portfolio-web/)**
+👉 **[🌐 Click here to view My Portfolio](https://developwithanuj.github.io/Portfolio-web/)**
 
 ---
 
